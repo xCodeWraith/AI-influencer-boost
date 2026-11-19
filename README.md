@@ -1,107 +1,100 @@
-# 💸 AI Influencer Otopilotu (v2026)
-## "Görünmez İmparatorluk Kurucusu"
+# 💸 AI Influencer Autopilot (v2026)
+## "The Invisible Media Empire Builder"
 
-> **"Sen bir içerik üreticisi değilsin. Sen bir MEDYA PATRONUSUN."**
+> **"You are not a content creator. You are a MEDIA MOGUL."**
 
 ![n8n](https://img.shields.io/badge/Workflow-n8n-FF6D5A?style=for-the-badge&logo=n8n)
-![OpenAI](https://img.shields.io/badge/Beyin-GPT--4o-412991?style=for-the-badge&logo=openai)
-![Durum](https://img.shields.io/badge/Durum-Production%20Ready-success?style=for-the-badge)
+![OpenAI](https://img.shields.io/badge/Brain-GPT--4o-412991?style=for-the-badge&logo=openai)
+![Status](https://img.shields.io/badge/Status-Production%20Ready-success?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
 
 ---
 
-## 🚨 Bu Nedir?
+## 🚨 What Is This?
 
-Bu **SADECE** bir n8n iş akışı değildir. Bu, tek bir JSON dosyasına sıkıştırılmış **tam otonom bir medya şirketidir.**
+This is **NOT** just another mundane n8n workflow. It is a **fully autonomous media company** compressed into an executable workflow.
 
-Çoğu "otomasyon gurusu" size metin kopyalayıp yapıştıran basit botlar satar. **Bu sistem farklıdır.** Instagram Algoritmasını **Tersine Mühendislik** ile çözmek için tasarlanmıştır. Viral videoları izler, neden viral olduklarını anlar (Görsel + Ses + Bağlam) ve bunları sizin **Sanal AI Influencer'ınız** (Aitana veya Lil Miquela gibi) için yeniden yazar.
+Most automation tutorials sell simple copy-paste text scrapers. **This system is fundamentally different.** It is engineered to **reverse-engineer the Instagram & TikTok recommendation algorithms**. It monitors top viral videos in real-time, deconstructs why they went viral (Visuals + Audio + Context), and rewrites high-converting video scripts tailored specifically for your **Virtual AI Influencer** (such as Aitana Lopez or Lil Miquela).
 
-### 💀 Felsefe
-Sosyal medya bir dikkat savaşıdır. Verileri milisaniyeler içinde işleyen algoritmalara karşı savaşıyorsunuz.
-*   **Eski Yol:** "İlham" gelmesini beklemek ve tükenmek.
-*   **Yeni Yol:** Bu sistemi kullanarak "Doğrulanmış Viral Verileri" madenlemek ve bunu haksız bir rekabet avantajına dönüştürmek.
-
----
-
-## ⚡ Temel Özellikler
-
-### 1. 👁️ Hibrit Vizyon Mantığı ("Göz")
-Sadece metni okuyan basit kazıyıcıların aksine, bu sistem **Görsel Bağlamı** analiz eder.
-*   **Girdi:** Kapak Resmi (Thumbnail) + Açıklama + Transkript.
-*   **Süreç:** GPT-4o sahneyi analiz eder (örneğin, "Spor salonu ortamı", "Araba vlogu").
-*   **Çıktı:** *Bağlam farkındalığına sahip* oyunculuk notlarıyla başlayan bir senaryo (örneğin, `[Alnındaki teri siler] "Arkadaşlar, bacak günü fena geçti..."`).
-
-### 2. 🛡️ Kırılmaz Mimari ("Kalkan")
-*   **Yeniden Deneme Mantığı (Retry Logic):** Bir API başarısız olursa sistem çökmez. Bekler ve 3 kez yeniden dener.
-*   **Girdi Korkulukları:** Eksik açıklamaları veya bozuk görselleri döngüyü bozmadan zarifçe yönetir.
-*   **Toplu İşleme:** Maksimum verimlilik için videoları 5'li partiler halinde işler.
-
-### 3. 🧠 Kişilik Enjeksiyonu ("Ruh")
-Sadece özetlemez. **Oyunculuk Yönetimi** yapar.
-*   "Üçüncü Şahıs" anlatımlarını **"Birinci Şahıs" (POV)** influencer deneyimlerine dönüştürür.
-*   Duygusal ipuçları ekler: `[Güler]`, `[İç çeker]`, `[Ekrana işaret eder]`.
+### 💀 Core Philosophy
+Social media is an attention war. You are competing against algorithms that process audience retention data in milliseconds.
+*   **The Outdated Way:** Waiting for "inspiration", manual editing, burnout, and inconsistent posting.
+*   **The Autonomous Way:** Mining **Verified Viral Datasets** and transforming algorithmic momentum into an unfair competitive advantage.
 
 ---
 
-## 🛠️ Kurulum & Ayarlar
-
-### Gereksinimler
-*   [n8n](https://n8n.io/) (Kendi sunucunuzda veya Bulutta)
-*   **Apify Hesabı** (Instagram Kazıyıcı için)
-*   **OpenAI API Anahtarı** (GPT-4o erişimi için)
-*   **Google Hesabı** (Sheets & Gmail için)
-
-### Adım 1: Canavarı İçe Aktar
-1.  Bu repodan `n8n.json` dosyasını indirin.
-2.  n8n panelinizi açın.
-3.  **"Import from File"** (Dosyadan İçe Aktar) seçeneğine tıklayın ve `n8n.json` dosyasını seçin.
-
-### Adım 2: Kimlik Bilgilerini Yapılandırın
-n8n içinde aşağıdaki kimlik bilgilerini (Credentials) ayarlamanız gerekir:
-*   `Apify API Key` -> **Scrape Hashtag** & **Transcribe Video** düğümleri için.
-*   `OpenAI API` -> **AI Agent** düğümü için.
-*   `Google Sheets OAuth2` -> Veritabanı kaydı için.
-*   `Gmail OAuth2` (Opsiyonel) -> Günlük raporlar için.
-
-### Adım 3: "Altın Madeni"ni Hazırla (Google Sheet)
-Yeni bir Google Sheet oluşturun ve 1. Satıra aşağıdaki başlıkları ekleyin:
-| A | B | C | D | E | F | G | H |
-|---|---|---|---|---|---|---|---|
-| **url** | **caption** | **thumbnail** | **Transcript** | **AI Generated Inspired Script** | **likesCount** | **ownerUsername** | **timestamp** |
-
-*(Not: Sistem verileri otomatik olarak bu sütunlara eşleyecektir.)*
-
----
-
-## 🚀 Kullanım
-
-1.  İş akışını açın.
-2.  **"Test Workflow"** (veya üretim için "Active") butonuna tıklayın.
-3.  **Form Girişi:** Bir hashtag (örneğin, `#yapayzeka`) ve analiz edilecek reel sayısını (örneğin, `20`) girin.
-4.  **Arkana Yaslan:** Sistemin verileri madenlemesini, analiz etmesini ve Google Sheet dosyanızı çekime hazır senaryolarla doldurmasını izleyin.
-
----
-
-## 📂 Proje Yapısı
+## ⚡ Key Architectural Features
 
 ```
-.
-├── n8n.json       # Çekirdek Motor (Bunu içe aktarın!)
-└── README.md      # Şu an bunu okuyorsunuz.
+┌────────────────────────────────┐       ┌────────────────────────────────┐
+│   Apify Video Scraper          │ ────> │   Multimodal Vision Engine     │
+│   (Thumbnail + Transcript)     │       │   GPT-4o Scene & Mood Analysis │
+└────────────────────────────────┘       └────────────────────────────────┘
+                                                         │
+                                                         ▼
+┌────────────────────────────────┐       ┌────────────────────────────────┐
+│   Google Sheets Database       │ <──── │   Persona & POV Injection      │
+│   & Automated Dispatch         │       │   Acting Directives & Captions │
+└────────────────────────────────┘       └────────────────────────────────┘
+```
+
+### 1. 👁️ Multimodal Vision Intelligence ("The Eye")
+Unlike primitive scrapers that only parse caption text, this system analyzes **Visual Context & Scene Framing**:
+*   **Inputs:** Cover Thumbnail + Audio Transcript + Metric Engagement Velocity.
+*   **Analysis:** GPT-4o examines the visual setting (e.g., gym workout, luxury car vlog, tech desk setup).
+*   **Output:** Generates a script complete with **scene-aware acting directives** (e.g., `[Wipes sweat from forehead] "Guys, leg day was brutal..."`).
+
+### 2. 🛡️ Fault-Tolerant Pipeline ("The Shield")
+*   **Automated Retry Loops:** Exponential backoff if social APIs rate-limit or fail.
+*   **Input Guardrails:** Gracefully handles missing captions or audio without breaking execution batches.
+*   **Batched Throughput:** Processes top viral content in chunks of 5 for optimal token efficiency.
+
+### 3. 🧠 Persona & POV Injection ("The Soul")
+It doesn't merely summarize; it executes **Automated Creative Direction**:
+*   Converts dry third-person commentary into relatable **First-Person POV** influencer narratives.
+*   Embeds emotional anchors and physical cues: `[Laughs]`, `[Deep sigh]`, `[Points to camera]`.
+
+---
+
+## 🛠️ Installation & Setup Guide
+
+### Prerequisites
+*   [n8n](https://n8n.io/) (Self-Hosted instance or n8n Cloud)
+*   **Apify Account** (For Instagram/TikTok video scraping actor)
+*   **OpenAI API Key** (GPT-4o access)
+*   **Google Account** (Google Sheets for data logging & Gmail for alerts)
+
+### Step 1: Import the Workflow
+1.  Download `n8n.json` from this repository.
+2.  Open your n8n interface.
+3.  Click **"Import from File"** and select `n8n.json`.
+
+### Step 2: Configure Credentials
+Within your n8n workflow canvas, configure credentials for the following nodes:
+*   `Apify API Key` -> For **Scrape Hashtag** & **Transcribe Video** nodes.
+*   `OpenAI API Key` -> For **AI Agent / GPT-4o** processing node.
+*   `Google Sheets OAuth2` -> For **Append to Sheet** node.
+
+### Step 3: Set Your Niche Target
+Open the configuration node and specify your target parameters:
+```json
+{
+  "target_hashtags": ["fitness", "lifestyle", "techvlog"],
+  "min_view_count": 50000,
+  "language": "en",
+  "persona_tone": "charismatic, energetic, direct"
+}
 ```
 
 ---
 
-## ⚠️ Yasal Uyarı
+## 🎯 Use Case Scenarios
 
-**Bu araç önemli bir rekabet avantajı sağlar.**
-*   Sorumlu kullanın.
-*   Spam yapmayın.
-*   Platformların Hizmet Koşullarına saygı gösterin.
-
-**Piyasa adil değil. Ama artık şans sizden yana.**
+*   **Virtual AI Influencer Scaling:** Fuel AI avatar pipelines (HeyGen, Midjourney, ElevenLabs) with pre-validated viral scripts.
+*   **Faceless YouTube Shorts / TikTok Channels:** Fully automated research and scripting for daily mass-publishing.
+*   **Affiliate & E-Commerce Arbitrage:** Turn trending viral hooks into high-converting product recommendation scripts.
 
 ---
 
-**Geliştirici:**
-### 👻 XCodeWraith DEV.
-*Dijital Mimar | Sistem Kurucu*
+**Maintained by:** [xCodeWraith DEV.](https://github.com/xCodeWraith)  
+**License:** [MIT](LICENSE)
